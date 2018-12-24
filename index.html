@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngualrJS Console Reading</title>
+</head>
+<body>
+    <div ng-app="test">
+        <div ng-controller="testCtrl">
+            <h5 ng-bind="testText"></h5>
+        </div>
+    </div>
+    <script src="./consoleUtil.js"></script>
+    <script src="./angular.js"></script>
+    <script>
+        var test = angular.module("test", ['ng']);
+        test.controller("testCtrl", ["$scope", function($scope) {
+            $scope.testText = "测试文本"
+        }])
+    </script>
+</body>
+</html>
